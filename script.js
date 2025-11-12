@@ -15,3 +15,11 @@ document.querySelector('.contact-form').addEventListener('submit', function(e) {
     alert('Merci ! Nous vous contacterons bientôt.');
     this.reset();
 });
+
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('nav-active');
+});
+
