@@ -65,11 +65,13 @@ body {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    animation: slideDown 0.6s ease-out;
 }
 
 .hero p {
     font-size: 1.3rem;
     margin-bottom: 2rem;
+    animation: slideUp 0.6s ease-out 0.2s both;
 }
 
 .cta-btn {
@@ -85,6 +87,30 @@ body {
 
 .cta-btn:hover {
     background: #ff5500;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* SERVICES */
@@ -114,7 +140,8 @@ body {
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .service-card h3 {
@@ -194,6 +221,10 @@ footer {
         font-size: 2rem;
     }
 
+    .hero p {
+        font-size: 1.1rem;
+    }
+
     .nav-links {
         gap: 1rem;
     }
@@ -201,4 +232,20 @@ footer {
     .hero {
         padding: 4rem 20px;
     }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .services h2,
+    .about h2,
+    .contact h2 {
+        font-size: 1.5rem;
+    }
 }
+
